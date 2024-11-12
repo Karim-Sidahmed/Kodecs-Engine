@@ -1,27 +1,32 @@
 #pragma once
+// Entry point code for the application, runs when the program starts
 
 #ifdef  KDS_PLATFORM_WINDOWS
 
+// Declare the CreateApplication function from the Kodecs namespace
 extern Kodecs::Application* Kodecs::CreateApplication();
 
 int main(int argc, char** argv) {
 
-	printf("Kodecs Engine\n");
+    // Print a message to the console
+    printf("Kodecs Engine\n");
 
-	Kodecs::Log::Init();
+    // Initialize the logging system
+    Kodecs::Log::Init();
 
-	KDS_CORE_WARN("Initialized Log!");
+    // Log a warning message
+    KDS_CORE_WARN("Initialized Log!");
 
-	int a = 5;
-	KDS_INFO("Hello! Var={0}", a);
+    // Example variable and log an info message
+    int a = 5;
+    KDS_INFO("Hello! Var={0}", a);
 
-	
+    // Create the application instance and run it
+    auto app = Kodecs::CreateApplication();
+    app->Run();
 
-	auto app = Kodecs::CreateApplication();
-	app->Run();
-	delete app;
-
+    // Clean up the application instance after the run
+    delete app;
 }
 
 #endif //  KDS_PLATFORM_WINDOWS
-
