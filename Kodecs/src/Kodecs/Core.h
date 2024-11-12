@@ -1,4 +1,3 @@
-// Core.h file
 #pragma once
 
 // Define export/import macros depending on the platform and build type.

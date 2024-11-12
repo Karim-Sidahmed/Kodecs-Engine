@@ -2,16 +2,16 @@
 
 #include <memory>  // For smart pointers
 
-#include "Core.h"  // For core functionalities
-#include "spdlog/spdlog.h"  // For the logging library
+#include "Core.h"  
+#include "spdlog/spdlog.h"  
 
 namespace Kodecs {
 
-    // Log class that manages logging functionality
+    
     class KODECS_API Log {
 
     public:
-        static void Init();  // Function to initialize logging
+        static void Init();  
 
         // Inline functions to access the core and client loggers
         inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
