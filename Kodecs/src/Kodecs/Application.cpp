@@ -1,15 +1,12 @@
-// Application.cpp file
 #include "Application.h"
 
 namespace Kodecs {
 
-	// Constructor for the Application class.
 	// This is where any initial setup for the Application object would occur.
 	Application::Application() {
 
 	}
 
-	// Destructor for the Application class.
 	// This is where cleanup would be done when an Application object is destroyed.
 	Application::~Application() {
 

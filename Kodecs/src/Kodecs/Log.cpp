@@ -1,5 +1,5 @@
-#include "Log.h"  // Includes the log class for logging purposes
-#include "spdlog/sinks/stdout_color_sinks.h"  // Includes a specific logging sink for colored console output
+#include "Log.h"  
+#include "spdlog/sinks/stdout_color_sinks.h" 
 
 namespace Kodecs {
 
@@ -7,7 +7,7 @@ namespace Kodecs {
     std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
     std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
 
-    // Function to initialize logging
+    
     void Log::Init() {
 
         // Set the log pattern format (timestamp, log level, message)

@@ -3,15 +3,13 @@
 
 #ifdef  KDS_PLATFORM_WINDOWS
 
-// Declare the CreateApplication function from the Kodecs namespace
 extern Kodecs::Application* Kodecs::CreateApplication();
 
 int main(int argc, char** argv) {
 
-    // Print a message to the console
     printf("Kodecs Engine\n");
 
-    // Initialize the logging system
+   
     Kodecs::Log::Init();
 
     // Log a warning message
@@ -25,7 +23,7 @@ int main(int argc, char** argv) {
     auto app = Kodecs::CreateApplication();
     app->Run();
 
-    // Clean up the application instance after the run
+  
     delete app;
 }
 

@@ -6,6 +6,6 @@
 #include "Kodecs/Application.h"  // For the Application class
 #include "Kodecs/Log.h"  // For the Log class
 
-// --- Entry Point ---
-#include "Kodecs/EntryPoint.h"  // For the entry point
+// --- Entry Point -----
+#include "Kodecs/EntryPoint.h"
 // ---------------------
