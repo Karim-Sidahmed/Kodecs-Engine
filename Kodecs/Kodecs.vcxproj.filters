@@ -7,6 +7,12 @@
     <Filter Include="Kodecs\Events">
       <UniqueIdentifier>{C2AAE290-2E6B-5EC7-F7A5-A7446325A3A3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Kodecs.h" />
@@ -34,9 +40,13 @@
     <ClInclude Include="src\Kodecs\Log.h">
       <Filter>Kodecs</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kodecs\Window.h">
+      <Filter>Kodecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\kdspch.h" />
-    <ClInclude Include="src\Kodecs\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kodecs\Application.cpp">
@@ -45,7 +55,9 @@
     <ClCompile Include="src\Kodecs\Log.cpp">
       <Filter>Kodecs</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\kdspch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

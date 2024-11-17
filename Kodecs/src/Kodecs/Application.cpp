@@ -1,17 +1,19 @@
 #include "kdspch.h"
 #include "Application.h"
 
-#include "Kodecs/Events/ApplicationEvent.h"
+
 #include "Kodecs/Log.h"
 
 #include <GLFW/glfw3.h>
 
 namespace Kodecs {
 
+#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
 	// This is where any initial setup for the Application object would occur.
 	Application::Application() {
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window->SetEventCallback(BIND_EVENT_FN(Application::OnEvent));
 		
 	}
 
@@ -19,7 +21,18 @@ namespace Kodecs {
 	Application::~Application() {
 
 	}
+	void Application::OnEvent(Event& e) {
 
+
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>([this](WindowCloseEvent& event) {
+			return this->OnWindowClose(event);
+		});
+		KDS_CORE_TRACE("{0}", e.ToString());
+
+	}
+
+	
 	// Run method for the Application class.
 	// This method starts the application's main loop, which continuously runs while `true`.
 	// Typically, this loop would include game logic, rendering, and event handling.
@@ -45,5 +58,11 @@ namespace Kodecs {
 			m_Window->OnUpdate();
 		
 		}
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e) {
+
+		m_Running = false;
+		return true;
 	}
 }
