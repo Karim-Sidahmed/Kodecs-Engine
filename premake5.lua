@@ -16,8 +16,11 @@ project "Kodecs"
     language "C++"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "kdspch.h"
+    pchsource "Kodecs/src/kdspch.cpp"
+    
     characterset "Unicode"
     
     files{
@@ -27,7 +30,7 @@ project "Kodecs"
     }
 
     includedirs{
-
+       "%{prj.name}/src" ,
        "%{prj.name}/vendor/spdlog/include"
     }
 
@@ -35,6 +38,8 @@ project "Kodecs"
         cppdialect "C++17"
         staticruntime "On"
         systemversion "latest"
+
+        buildoptions {"/utf-8"}
 
         defines{
 
@@ -92,6 +97,8 @@ project "Sandbox"
         cppdialect "C++17"
         staticruntime "On"
         systemversion "latest"
+
+        buildoptions { "/utf-8" }
 
         defines{
 

@@ -4,6 +4,9 @@
     <Filter Include="Kodecs">
       <UniqueIdentifier>{9E1CE3BE-8ABE-0D95-7379-21E95FBA94E5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kodecs\Events">
+      <UniqueIdentifier>{C2AAE290-2E6B-5EC7-F7A5-A7446325A3A3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Kodecs.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Kodecs\EntryPoint.h">
       <Filter>Kodecs</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kodecs\Events\ApplicationEvent.h">
+      <Filter>Kodecs\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kodecs\Events\Event.h">
+      <Filter>Kodecs\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kodecs\Events\KeyEvent.h">
+      <Filter>Kodecs\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kodecs\Events\MouseEvent.h">
+      <Filter>Kodecs\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Kodecs\Log.h">
       <Filter>Kodecs</Filter>
     </ClInclude>
+    <ClInclude Include="src\kdspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kodecs\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Kodecs\Log.cpp">
       <Filter>Kodecs</Filter>
     </ClCompile>
+    <ClCompile Include="src\kdspch.cpp" />
   </ItemGroup>
 </Project>

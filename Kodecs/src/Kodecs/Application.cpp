@@ -1,4 +1,8 @@
+#include "kdspch.h"
 #include "Application.h"
+
+#include "Kodecs/Events/ApplicationEvent.h"
+#include "Kodecs/Log.h"
 
 namespace Kodecs {
 
@@ -17,6 +21,18 @@ namespace Kodecs {
 	// Typically, this loop would include game logic, rendering, and event handling.
 	void Application::Run() {
 
+		WindowResizeEvent e(1280, 720);
+
+		if (e.IsInCategory(EventCategoryApplication)) {
+
+			KDS_TRACE(e.ToString());
+		}
+		if (e.IsInCategory(EventCategoryInput)) {
+			
+			KDS_TRACE(e.ToString());
+
+		}
+		
 		while (true) {
 
 		}
