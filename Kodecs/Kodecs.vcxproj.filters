@@ -35,6 +35,8 @@
       <Filter>Kodecs</Filter>
     </ClInclude>
     <ClInclude Include="src\kdspch.h" />
+    <ClInclude Include="src\Kodecs\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kodecs\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Kodecs</Filter>
     </ClCompile>
     <ClCompile Include="src\kdspch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

@@ -10,6 +10,13 @@ configurations{
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-${cfg.architecture}"
 
+
+-- Include directoires relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Kodecs/vendor/GLFW/include"
+
+include "Kodecs/vendor/GLFW"
+
 project "Kodecs"
     location "Kodecs"
     kind "SharedLib"
@@ -31,7 +38,14 @@ project "Kodecs"
 
     includedirs{
        "%{prj.name}/src" ,
-       "%{prj.name}/vendor/spdlog/include"
+       "%{prj.name}/vendor/spdlog/include",
+       "%{IncludeDir.GLFW}"
+    }
+
+    links{
+
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
