@@ -10,7 +10,17 @@
 #define KODECS_API __declspec(dllimport)
 #endif
 #else
-#error Kodecs only supports Windows!
+	#error Kodecs only supports Windows!
 #endif
+
+#ifdef KDS_ENABLE_ASSERTS
+	#define KDS_ASSERT(x, ...) {if(!(x)) {KDS_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define KDS_CORE_ASSERT(x, ...) {if(!(x)) {KDS_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+
+#else
+	#define KDS_ASSERT(x, ...)
+	#define KDS_CORE_ASSERT(x, ...)
+#endif // KDS_ENABLE_ASSERTS
+
 
 #define BIT(x) (1 << x)

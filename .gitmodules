@@ -1,3 +1,6 @@
 [submodule "Kodecs/vendor/spdlog"]
 	path = Kodecs/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Kodecs/vendor/GLFW"]
+	path = Kodecs/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
