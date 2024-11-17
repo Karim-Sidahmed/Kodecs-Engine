@@ -164,17 +164,17 @@
     <ClInclude Include="src\Kodecs\Events\KeyEvent.h" />
     <ClInclude Include="src\Kodecs\Events\MouseEvent.h" />
     <ClInclude Include="src\Kodecs\Log.h" />
-    <ClInclude Include="src\kdspch.h" />
     <ClInclude Include="src\Kodecs\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\kdspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kodecs\Application.cpp" />
     <ClCompile Include="src\Kodecs\Log.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\kdspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">

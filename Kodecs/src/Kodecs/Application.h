@@ -2,6 +2,8 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Kodecs/Events/ApplicationEvent.h"
+
 #include "Window.h"
 
 namespace Kodecs {
@@ -14,7 +16,10 @@ namespace Kodecs {
 
 		// Run method that starts the main loop of the application
 		void Run();
+
+		void OnEvent(Event& e);
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};
